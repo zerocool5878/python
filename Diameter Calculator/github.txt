@@ -1,0 +1,11 @@
+echo "# python" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/zerocool5878/python.git
+git push -u origin master
+
+to delete
+git rm [filename]
+git commit -m "delete file"
+push?
