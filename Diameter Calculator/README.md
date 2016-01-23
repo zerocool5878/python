@@ -1,5 +1,4 @@
-"# python" 
-This code was written for the purpose of mesuring the diameter from motorcycle handlebars without removing the grips.
+This script was written for the purpose of mesuring the diameter from motorcycle handlebars without removing the grips.
 
 The only measurment you need is the perimeter which you can get from wrapping a piece of string around the bars and then measuring the string.
 
