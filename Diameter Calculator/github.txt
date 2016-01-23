@@ -9,3 +9,9 @@ to delete
 git rm [filename]
 git commit -m "delete file"
 push?
+
+
+to update everything to current:
+git add
+git commit -m "reason HERE"
+git push -u origin master
