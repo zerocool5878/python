@@ -8,7 +8,7 @@ if var == 'd':
 	print "Now type the circumference measurement for the diameter you would like calculate."
 	cir = float(raw_input())
 	answer = cir/3.1415926535
-	print "What accuracy do you want the diameter rounded to. Type 8 for nearest 1/8, 16 for 1/16th etc."
+	print "What accuracy do you want the diameter rounded to. Type 8 for nearest 1/8, 16 for 1/16th, etc."
 	denominator = int(raw_input())
 	rnd = round(answer * denominator)
 	frac = Fraction(int(rnd), denominator)
@@ -23,7 +23,7 @@ elif var == 'r':
 	print "Now type the circumference measurement for the radius you would like calculate."
 	cir = float(raw_input())
 	answer = cir/3.1415926535
-	print "What accuracy do you want the diameter rounded to. Type 8 for nearest 1/8, 16 for 1/16th etc."
+	print "What accuracy do you want the diameter rounded to. Type 8 for nearest 1/8, 16 for 1/16th, etc."
 	denominator = int(raw_input())
 	rnd = round(answer/2 * denominator)
 	frac = Fraction(int(rnd), denominator)
