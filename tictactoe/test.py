@@ -27,7 +27,8 @@ def x_move():
 x_move()
 	
 	
-	
+#if I enter a1 as my location I should get an error because it is not true 
+#because I put an x in the 'a1' dictionary
 	
 	
 
