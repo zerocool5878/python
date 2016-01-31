@@ -13,7 +13,7 @@ def x_move():
 		try:
 			ans = raw_input('Player x please Enter a location: ') #ask user for location
 			f = board[ans] #current value of location selected
-			f == '_' or ' ' #checks to see if current location has a '_' or a ' ' which is considered free space and we can write to it
+			f is '_' or f is ' ' #checks to see if current location has a '_' or a ' ' which is considered free space and we can write to it
 			
 		
 		except:
