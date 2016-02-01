@@ -1,4 +1,6 @@
-'''
+''' 
+Board layout reference
+
     1   2   3
 a  ___|___|___
 b  ___|___|___
@@ -6,12 +8,10 @@ c     |   |
  
 '''
 
-#To do list: 
-#1. add overwrite protection where player can not overwrite a taken square
-
-
 board = {'a1':'_','a2':'_','a3':'_','b1':'_','b2':'_','b3':'_','c1':' ','c2':' ','c3':' '}
+open_positions = ['_', ' ']
 
+	
 def play_again():
 	a = raw_input('Game over!. Would you like to play again. type y or n: ')
 	if a == 'y':
@@ -34,7 +34,6 @@ def reset():
 	board['c2'] = ' '
 	board['c3'] = ' '
 	
-	
 
 def prt_board():
     #This is the main layout which gets the positions from variable board above.
@@ -44,18 +43,39 @@ def prt_board():
         board['c1'],board['c2'],board['c3'])
 
 def x_move():
-	prt_board()
 	ans = raw_input('Player x please Enter a location: ')
-	board[ans] = 'x'
-	chk()
-	o_move()
+	
+	if ans in board.keys():
+		if board[ans] in open_positions:
+			board[ans] = 'x'
+			prt_board()
+			chk()
+			o_move()
+		else:
+			print 'That space is already taken. Try again-'
+			x_move()
+	else:
+		print 'It looks like you entered an invaild location. Try again-'
+		x_move()
+			
+	
     
 def o_move():
-	prt_board()
 	ans = raw_input('Player o please Enter a location: ')
-	board[ans] = 'o'
-	chk()
-	x_move()
+	
+	if ans in board.keys():
+		if board[ans] in open_positions:
+			board[ans] = 'o'
+			prt_board()
+			chk()
+			x_move()
+		else:
+			print 'That space is already taken. Try again-'
+			x_move()
+	else:
+		print 'It looks like you entered an invaild location. Try again-'
+		o_move()
+			
 	
 def chk():
 	if board[
@@ -102,10 +122,14 @@ def start():
 	who = raw_input('Which player will be going first? type x or o: ')
 
 	if who == 'x':
+		prt_board()
 		x_move()
 		
+		
 	elif who == 'o':
+		prt_board()
 		o_move()
+		
 		
 start()
 
